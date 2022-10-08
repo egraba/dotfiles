@@ -100,6 +100,3 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat="ccat"
-alias vi="nvim"
-alias vim="nvim"
