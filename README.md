@@ -9,6 +9,14 @@ an excellent (and simple) article from [Matthew Broberg](https://github.com/mbbr
 
 ## Notes
 
+### Installation
+```
+git clone git@github.com:egraba/dotfiles.git
+cd dotfiles
+chmod +x install.sh
+./install.sh
+```
+
 ### Neovim
 Launch nvim, execute PlugInstall, update the plugins, and exit:
 ```
