@@ -1,24 +1,24 @@
 #!/bin/zsh
 
+install_file() {
+	if [ -f $2 ]; then
+		echo "$2 is present."
+		rm $2
+		echo "$2 has been deleted."
+	fi
+	ln -s $1 $2
+	echo "New $2 has been installed!"
+}
+
 # zsh
-ZSHRC=~/.zshrc
-if [ -f $ZSHRC ]; then
-    echo "$ZSHRC is present."
-    rm $ZSHRC
-    echo "$ZSHRC has been deleted."
-fi
-ln -s $(pwd)/.zshrc $ZSHRC
-echo "New $ZSHRC has been installed!"
+S_ZSHRC=$(pwd)/.zshrc
+D_ZSHRC=~/.zshrc
+install_file $S_ZSHRC $D_ZSHRC
 
 # Neovim
-VIMRC=~/.config/nvim/init.vim
-if [ -f $VIMRC ]; then
-    echo "$VIMRC is present."
-    rm $VIMRC
-    echo "$VIMRC has been deleted."
-fi
-ln -s $(pwd)/.vimrc $VIMRC
-echo "New $VIMRC has been installed!"
+S_VIMRC=$(pwd)/.vimrc
+D_VIMRC=~/.config/nvim/init.vim
+install_file $S_VIMRC $D_VIMRC
 
 # Apply changes.
 exec $SHELL
