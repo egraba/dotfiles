@@ -7,3 +7,14 @@ an excellent (and simple) article from [Matthew Broberg](https://github.com/mbbr
 
 [dotfiles](https://dotfiles.github.io/tutorials/), a collection of tutorials to create your own dotfiles.
 
+## Notes
+
+### Neovim
+Launch nvim, execute PlugInstall, update the plugins, and exit:
+```
+nvim
+:PlugInstall
+:UpdateRemotePlugins
+:q!
+:q!
+```
