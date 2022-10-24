@@ -68,7 +68,7 @@ ZSH_CUSTOM=$HOME/development/projects/dotfiles/zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize pip python brew macos golang rust)
+plugins=(git colored-man-pages colorize python brew macos)
 
 source $ZSH/oh-my-zsh.sh
 
