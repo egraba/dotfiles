@@ -76,8 +76,6 @@ source $ZSH/oh-my-zsh.sh
 setopt extended_glob
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export GOPATH=~/go
-export PATH=$PATH:$(go env GOPATH)/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
