@@ -16,6 +16,8 @@ source $ZSH/oh-my-zsh.sh
 
 setopt extended_glob
 
+export PATH="$HOME/.local/bin:$PATH"
+
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
