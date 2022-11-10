@@ -2,7 +2,7 @@
 # Main settings
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
-plugins=(git colored-man-pages colorize python brew macos)
+plugins=(git colored-man-pages colorize python poetry brew macos)
 ZSH_CUSTOM=$HOME/development/projects/dotfiles/zsh-custom
 
 # Update settings
