@@ -10,6 +10,9 @@ install_file() {
 	echo "New $2 has been installed!"
 }
 
+# omz
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # zsh
 S_ZSHRC=$(pwd)/.zshrc
 D_ZSHRC=~/.zshrc
