@@ -12,13 +12,15 @@ install_file() {
 
 # omz
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# zsh
 S_ZSHRC=$(pwd)/.zshrc
 D_ZSHRC=~/.zshrc
 install_file $S_ZSHRC $D_ZSHRC
 
+# homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Neovim
+brew install neovim
 S_VIMRC=$(pwd)/.vimrc
 D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
