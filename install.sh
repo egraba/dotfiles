@@ -27,5 +27,8 @@ S_VIMRC=$(pwd)/.vimrc
 D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
 
+# SDKMAN
+curl -s "https://get.sdkman.io" | bash 
+
 # Apply changes.
 exec $SHELL
