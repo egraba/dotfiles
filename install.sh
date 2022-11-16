@@ -17,7 +17,9 @@ D_ZSHRC=~/.zshrc
 install_file $S_ZSHRC $D_ZSHRC
 
 # homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! (( $+commands[brew] )); then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 # Neovim
 brew install neovim
