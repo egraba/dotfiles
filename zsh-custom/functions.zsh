@@ -19,3 +19,8 @@ update_brew() {
 update_rust() {
 	rustup update
 }
+
+update_java() {
+	sdk selfupdate
+	sdk update java
+}
