@@ -27,6 +27,11 @@ S_VIMRC=$(pwd)/.vimrc
 D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
 
+# Rust
+if ! (( $+commands[rustup] )); then
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
 # SDKMAN
 curl -s "https://get.sdkman.io" | bash 
 
