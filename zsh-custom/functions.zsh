@@ -3,6 +3,7 @@
 update() {
 	update_brew
 	update_omz
+	update_rust
 }
 
 update_brew() {
@@ -13,4 +14,8 @@ update_brew() {
 
 update_omz() {
 	omz update
+}
+
+update_rust() {
+	rustup update
 }
