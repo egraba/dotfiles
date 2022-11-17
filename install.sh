@@ -11,7 +11,9 @@ install_file() {
 }
 
 # omz
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if ! (( $+ZSH )); then
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 S_ZSHRC=$(pwd)/.zshrc
 D_ZSHRC=~/.zshrc
 install_file $S_ZSHRC $D_ZSHRC
@@ -22,7 +24,9 @@ if ! (( $+commands[brew] )); then
 fi
 
 # Neovim
-brew install neovim
+if ! (( $+commands[nvim] )); then
+	brew install neovim
+fi
 S_VIMRC=$(pwd)/.vimrc
 D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
@@ -33,7 +37,9 @@ if ! (( $+commands[rustup] )); then
 fi
 
 # SDKMAN
-curl -s "https://get.sdkman.io" | bash 
+if [ ! -d $HOME/.sdkman ]; then
+	curl -s "https://get.sdkman.io" | bash 
+fi
 
 # Apply changes.
 exec $SHELL
