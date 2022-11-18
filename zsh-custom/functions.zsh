@@ -7,10 +7,6 @@ update() {
 	update_omz # Must be at the end, as shell might be refreshed.
 }
 
-update_omz() {
-	omz update
-}
-
 update_brew() {
 	brew update
 	brew upgrade
@@ -24,4 +20,8 @@ update_rust() {
 update_java() {
 	sdk selfupdate
 	sdk update java
+}
+
+update_omz() {
+	omz update
 }
