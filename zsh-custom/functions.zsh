@@ -1,9 +1,10 @@
 #!/bin/zsh
 
 update() {
-	update_omz
 	update_brew
 	update_rust
+	update_java
+	update_omz # Must be at the end, as shell might be refreshed.
 }
 
 update_omz() {
