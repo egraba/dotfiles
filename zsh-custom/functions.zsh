@@ -25,3 +25,7 @@ update_java() {
 update_omz() {
 	omz update
 }
+
+sshk() {
+	ssh-keygen -b 4096 -t rsa
+}
