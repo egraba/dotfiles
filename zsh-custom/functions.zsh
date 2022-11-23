@@ -1,28 +1,28 @@
 #!/bin/zsh
 
-update() {
-	update_brew
-	update_rust
-	update_java
-	update_omz # Must be at the end, as shell might be refreshed.
+upd() {
+	upd_brew
+	upd_rust
+	upd_java
+	upd_omz # Must be at the end, as shell might be refreshed.
 }
 
-update_brew() {
+upd_brew() {
 	brew update
 	brew upgrade
 	brew cleanup
 }
 
-update_rust() {
+upd_rust() {
 	rustup update
 }
 
-update_java() {
+upd_java() {
 	sdk selfupdate
 	sdk update java
 }
 
-update_omz() {
+upd_omz() {
 	omz update
 }
 
