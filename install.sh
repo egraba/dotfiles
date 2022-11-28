@@ -36,5 +36,13 @@ if ! (( $+commands[rustup] )); then
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
+# Python
+PYTHON_VERSION=3.11.0
+if ! (( $+commands[pyenv] )); then
+	brew install pyenv
+	pyenv install $PYTHON_VERSION
+	pyenv global $PYTHON_VERSION
+fi
+
 # Apply changes.
 exec $SHELL
