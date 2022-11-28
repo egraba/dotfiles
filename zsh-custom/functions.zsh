@@ -3,6 +3,7 @@
 upd() {
 	upd_brew
 	upd_rust
+	upd_python
 	upd_omz # Must be at the end, as shell might be refreshed.
 }
 
@@ -14,6 +15,10 @@ upd_brew() {
 
 upd_rust() {
 	rustup update
+}
+
+upd_python() {
+	poetry self update
 }
 
 upd_omz() {
