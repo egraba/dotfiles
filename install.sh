@@ -43,6 +43,9 @@ if ! (( $+commands[pyenv] )); then
 	pyenv install $PYTHON_VERSION
 	pyenv global $PYTHON_VERSION
 fi
+if ! (( $+commands[poetry] )); then
+	curl -sSL https://install.python-poetry.org | python3 -
+fi
 
 # Apply changes.
 exec $SHELL
