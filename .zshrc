@@ -1,7 +1,7 @@
 # List of complete settings: https://github.com/ohmyzsh/ohmyzsh/wiki/Settings#zsh
 # Main settings
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="af-magic"
+ZSH_THEME="robbyrussell"
 plugins=(git colored-man-pages colorize python poetry brew macos)
 ZSH_CUSTOM=$HOME/development/dotfiles/zsh-custom
 
