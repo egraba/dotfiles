@@ -19,7 +19,6 @@ upd_rust() {
 
 upd_python() {
 	pip install --upgrade pip
-	poetry self update
 }
 
 upd_omz() {
