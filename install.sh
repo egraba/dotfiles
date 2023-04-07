@@ -37,11 +37,8 @@ if ! (( $+commands[rustup] )); then
 fi
 
 # Python
-PYTHON_VERSION=3.11.0
 if ! (( $+commands[pyenv] )); then
 	brew install pyenv
-	pyenv install $PYTHON_VERSION
-	pyenv global $PYTHON_VERSION
 fi
 
 # Apply changes.
