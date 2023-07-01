@@ -41,5 +41,10 @@ if ! (( $+commands[pyenv] )); then
 	brew install pyenv
 fi
 
+# Poetry
+if ! (( $+commands[poetry] )); then
+	curl -sSL https://install.python-poetry.org | python3 -
+fi
+
 # Apply changes.
 exec $SHELL
