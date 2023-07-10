@@ -21,6 +21,8 @@ install_file $S_ZSHRC $D_ZSHRC
 # homebrew
 if ! (( $+commands[brew] )); then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/eric/.zprofile
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Neovim
@@ -32,19 +34,19 @@ D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
 
 # Rust
-if ! (( $+commands[rustup] )); then
-	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-fi
+#if ! (( $+commands[rustup] )); then
+#	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#fi
 
 # Python
-if ! (( $+commands[pyenv] )); then
-	brew install pyenv
-fi
+#if ! (( $+commands[pyenv] )); then
+#	brew install pyenv
+#fi
 
 # Poetry
-if ! (( $+commands[poetry] )); then
-	curl -sSL https://install.python-poetry.org | python3 -
-fi
+#if ! (( $+commands[poetry] )); then
+#	curl -sSL https://install.python-poetry.org | python3 -
+#fi
 
 # Apply changes.
 exec $SHELL
