@@ -14,7 +14,7 @@ install_file() {
 if ! (( $+ZSH )); then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-S_ZSHRC=$(pwd)/.zshrc
+S_ZSHRC=$(pwd)/dot_zshrc
 D_ZSHRC=~/.zshrc
 install_file $S_ZSHRC $D_ZSHRC
 
@@ -29,7 +29,7 @@ fi
 if ! (( $+commands[nvim] )); then
 	brew install neovim
 fi
-S_VIMRC=$(pwd)/.vimrc
+S_VIMRC=$(pwd)/dot_vimrc
 D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
 
