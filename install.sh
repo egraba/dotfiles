@@ -38,19 +38,25 @@ D_VIMRC=~/.config/nvim/init.vim
 install_file $S_VIMRC $D_VIMRC
 
 # Rust
-#if ! (( $+commands[rustup] )); then
-#	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-#fi
+if [ "$1" = "rust" ]; then
+	if ! (( $+commands[rustup] )); then
+		curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	fi
+fi
 
 # Python
-#if ! (( $+commands[pyenv] )); then
-#	brew install pyenv
-#fi
+if [ "$1" = "python" ]; then
+	if ! (( $+commands[pyenv] )); then
+		brew install pyenv
+	fi
+fi
 
 # Poetry
-#if ! (( $+commands[poetry] )); then
-#	curl -sSL https://install.python-poetry.org | python3 -
-#fi
+if [ "$1" = "poetry" ]; then
+	if ! (( $+commands[poetry] )); then
+		curl -sSL https://install.python-poetry.org | python3 -
+	fi
+fi
 
 # Apply changes.
 exec $SHELL
