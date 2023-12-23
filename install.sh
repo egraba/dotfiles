@@ -55,6 +55,8 @@ fi
 if [ "$1" = "poetry" ]; then
 	if ! (( $+commands[poetry] )); then
 		curl -sSL https://install.python-poetry.org | python3 -
+		poetry self add poetry-dotenv-plugin
+		poetry config virtualenvs.prefer-active-python true
 	fi
 fi
 
