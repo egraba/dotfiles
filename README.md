@@ -21,3 +21,6 @@ nvim
 :q!
 :q!
 ```
+
+### How to store company-specific settings?
+Create a file called `dot_company.zsh` and put company-specific environment variables inside.
