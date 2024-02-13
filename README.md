@@ -10,12 +10,7 @@ an excellent (and simple) article from [Matthew Broberg](https://github.com/mbbr
 ## Notes
 
 ### Installation
-```
-git clone git@github.com:egraba/dotfiles.git
-cd dotfiles
-chmod +x install.sh
-./install.sh
-```
+This project uses [chezmoi](https://www.chezmoi.io/). Follow chezmoi installation steps to install the dotfiles.
 
 ### Neovim
 Launch nvim, execute PlugInstall, update the plugins, and exit:
