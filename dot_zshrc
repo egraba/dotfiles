@@ -17,6 +17,7 @@ setopt extended_glob
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.docker/bin:$PATH"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
