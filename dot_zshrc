@@ -18,7 +18,6 @@ setopt extended_glob
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.docker/bin:$PATH"
-source "$HOME/.rye/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
