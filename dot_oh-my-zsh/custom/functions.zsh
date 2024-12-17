@@ -18,7 +18,7 @@ upd_rust() {
 }
 
 upd_python() {
-	pipx --upgrade-all
+	pipx upgrade-all
 }
 
 upd_omz() {
