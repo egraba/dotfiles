@@ -14,9 +14,14 @@ upd() {
 # Upgrade brew-related packages.
 #
 upd_brew() {
-	brew update
-	brew upgrade
-	brew cleanup
+	if command -v brew &> /dev/null; then
+    		echo "Brew is installed"
+		brew update
+		brew upgrade
+		brew cleanup
+	else
+    		echo "Brew is not installed"
+	fi
 }
 
 upd_rust() {
