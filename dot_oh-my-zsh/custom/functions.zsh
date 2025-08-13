@@ -10,6 +10,9 @@ upd() {
 	upd_omz # Must be at the end, as shell might be refreshed.
 }
 
+#
+# Upgrade brew-related packages.
+#
 upd_brew() {
 	brew update
 	brew upgrade
