@@ -36,6 +36,9 @@ upd_rust() {
 	fi
 }
 
+#
+# Upgrade Python.
+#
 upd_python() {
 	pipx upgrade-all
 }
