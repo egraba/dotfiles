@@ -28,7 +28,12 @@ upd_brew() {
 # Upgrade rustup.
 #
 upd_rust() {
-	rustup update
+	if command -v rustup &> /dev/null; then
+		echo "Rust is installed"
+		rustup update
+	else
+		echo "Rust is not installed"
+	fi
 }
 
 upd_python() {
