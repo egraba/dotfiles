@@ -13,6 +13,7 @@ COMPLETION_WAITING_DOTS=true
 # End of omz settings
 source $ZSH/oh-my-zsh.sh
 
+# Enables extended globbing patterns
 setopt extended_glob
 
 export PATH="$HOME/.local/bin:$PATH"
