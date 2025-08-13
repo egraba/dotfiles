@@ -24,6 +24,9 @@ upd_brew() {
 	fi
 }
 
+#
+# Upgrade rustup.
+#
 upd_rust() {
 	rustup update
 }
