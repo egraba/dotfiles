@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+#
+# Upgrade development environment.
+#
 upd() {
 	upd_brew
 	upd_rust
