@@ -15,12 +15,12 @@ upd() {
 #
 upd_brew() {
 	if command -v brew &> /dev/null; then
-    		echo "Brew is installed"
+		echo "Brew is installed"
 		brew update
 		brew upgrade
 		brew cleanup
 	else
-    		echo "Brew is not installed"
+		echo "Brew is not installed"
 	fi
 }
 
@@ -40,7 +40,7 @@ upd_rust() {
 # Upgrade Python.
 #
 upd_python() {
-	pipx upgrade-all
+	uvx upgrade	
 }
 
 upd_omz() {
