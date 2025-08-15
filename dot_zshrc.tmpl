@@ -19,3 +19,12 @@ setopt extended_glob
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.docker/bin:$PATH"
+
+{{ if eq .laptop "home" -}}
+# Home laptop specifics
+
+
+{{ else if eq .laptop "pro" -}}
+# Pro laptop specifics
+
+{{ end -}}
