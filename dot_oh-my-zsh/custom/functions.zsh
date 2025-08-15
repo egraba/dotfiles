@@ -54,12 +54,15 @@ update_omz() {
 	fi
 }
 
+#
+# Generate a new SSH key pair.
+#
 sshk() {
 	ssh-keygen -b 4096 -t rsa
 }
 
 #
-# Python-specific
+# Generate a new Django secret key.
 #
 generate_django_secret_key() {
 	python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
