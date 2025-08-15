@@ -1,50 +1,57 @@
 #!/bin/zsh
 
 #
-# Upgrade development environment.
+# Update development environment.
 #
 upd() {
-	upd_brew
-	upd_rust
-	upd_python
-	upd_omz # Must be at the end, as shell might be refreshed.
+	update_brew
+	update_rust
+	update_python
+	update_omz # Must be at the end, as shell might be refreshed.
 }
 
-#
-# Upgrade brew-related packages.
-#
-upd_brew() {
-	if command -v brew &> /dev/null; then
+command_exists() {
+	command -v $1 &> /dev/null
+}
+
+update_brew() {
+	if command_exists brew; then
 		echo "Brew is installed"
 		brew update
 		brew upgrade
 		brew cleanup
+		brew doctor
 	else
 		echo "Brew is not installed"
 	fi
 }
 
-#
-# Upgrade rustup.
-#
-upd_rust() {
-	if command -v rustup &> /dev/null; then
+update_rust() {
+	if command_exists rustup; then
 		echo "Rust is installed"
+		rustup self update
 		rustup update
 	else
 		echo "Rust is not installed"
 	fi
 }
 
-#
-# Upgrade Python.
-#
-upd_python() {
-	uvx upgrade	
+update_python() {
+	if command_exists uv; then
+		echo "uv is installed"
+		uv self update
+	else
+		echo "uv is not installed"
+	fi
 }
 
-upd_omz() {
-	omz update
+update_omz() {
+	if command_exists omz; then
+		echo "Oh-My-Zsh is installed"
+		omz update
+	else
+		echo "Oh-My-Zsh is not installed"
+	fi
 }
 
 sshk() {
