@@ -63,7 +63,8 @@ sshk() {
 
 #
 # Generate a new Django secret key.
+# This function has to be exectued in a virtual env, using uv.
 #
 generate_django_secret_key() {
-	python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+	uv run python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 }
