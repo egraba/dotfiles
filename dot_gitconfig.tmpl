@@ -1,12 +1,10 @@
 [user]
 	name = Eric Grabarczyk
 	email = {{ .email | quote }}
-	signingkey = /Users/eric/.ssh/id_rsa.pub
+	signingkey = {{ .signingkey }}
 [core]
 	editor = nvim
 [commit]
 	gpgsign = true
-[gpg]
-	format = ssh
 [tag]
 	gpgsign = true
