@@ -34,11 +34,6 @@ export PATH="$HOME/.docker/bin:$PATH"
 # For GPG and Ghostty
 export GPG_TTY=$(tty)
 
-{{ if eq .laptop "home" -}}
-# Home laptop specifics
-
-
-{{ else if eq .laptop "work" -}}
-# Pro laptop specifics
-
-{{ end -}}
+{{ if eq .laptop "home" }}
+{{ else if eq .laptop "work" }}
+{{ end }}
