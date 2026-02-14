@@ -85,24 +85,6 @@ make unstow-git
 - **Zsh**: Create `~/.zshrc.local` for machine-specific config (auto-sourced).
 - **Nvim**: Add plugin specs to `nvim/.config/nvim/lua/plugins/` — lazy.nvim auto-loads all `.lua` files in that directory.
 
-## Migrating from chezmoi
-
-If you were using chezmoi before:
-
-```bash
-# Remove chezmoi state (optional, keeps your data safe)
-chezmoi purge
-
-# The old chezmoi source dir can be deleted once you're happy with stow
-rm -rf ~/.local/share/chezmoi
-```
-
-## Sources of inspiration
-
-- [Move your dotfiles to version control](https://opensource.com/article/19/3/move-your-dotfiles-version-control) by Matthew Broberg
-- [dotfiles](https://dotfiles.github.io/tutorials/) collection of tutorials
-- [Managing dotfiles with GNU Stow](https://venthur.de/2021-12-19-managing-dotfiles-with-stow.html) by Bastian Venthur
-
 ## License
 
 [MIT](LICENSE.md)
