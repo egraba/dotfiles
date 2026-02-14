@@ -1,2 +1,2 @@
-# Custom aliases
-# Add your project-specific or machine-specific aliases here.
+alias vi="nvim"
+alias vim="nvim"
