@@ -22,3 +22,7 @@ export PATH="$HOME/.docker/bin:$PATH"
 
 # For GPG and Ghostty
 export GPG_TTY=$(tty)
+
+# aliases
+alias vi=nvim
+alias vim:nvim
