@@ -46,6 +46,9 @@ opt.timeoutlen = 300
 opt.completeopt = "menu,menuone,noselect"
 opt.showmode = false
 
+-- Detect *.h as C rather than C++ so BSD C style applies to headers
+vim.g.c_syntax_for_h = true
+
 -- Disable netrw (we use nvim-tree)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

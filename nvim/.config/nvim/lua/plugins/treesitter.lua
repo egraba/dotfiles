@@ -23,7 +23,8 @@ return {
         "yaml",
       },
       highlight = { enable = true },
-      indent = { enable = true },
+      -- C indent comes from vim-openbsd (see plugins/bsd-style.lua); don't override it
+      indent = { enable = true, disable = { "c" } },
       incremental_selection = {
         enable = true,
         keymaps = {
