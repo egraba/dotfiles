@@ -5,10 +5,11 @@ My personal dotfiles, managed with [GNU Stow](https://www.gnu.org/software/stow/
 ## Prerequisites
 
 - [GNU Stow](https://www.gnu.org/software/stow/)
-- [Neovim](https://neovim.io/) (>= 0.10)
+- [Neovim](https://neovim.io/) (>= 0.12)
 - [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)
 - [Git](https://git-scm.com/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for Telescope live grep)
+- [tree-sitter CLI](https://github.com/tree-sitter/tree-sitter) (`brew install tree-sitter-cli`, to build parsers)
 - A [Nerd Font](https://www.nerdfonts.com/) (for icons in nvim)
 
 ## Installation

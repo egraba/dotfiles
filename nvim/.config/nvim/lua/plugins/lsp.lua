@@ -22,6 +22,8 @@ return {
         "dockerls",
         "bashls",
       },
+      -- Servers are enabled explicitly in the lspconfig spec below, after their config is set
+      automatic_enable = false,
     },
   },
 
@@ -34,7 +36,6 @@ return {
       "mason-org/mason-lspconfig.nvim",
     },
     config = function()
-      local lspconfig = require("lspconfig")
       local capabilities = vim.lsp.protocol.make_client_capabilities()
 
       -- Try to enhance capabilities with blink.cmp if available
@@ -85,10 +86,12 @@ return {
         bashls = {},
       }
 
+      -- nvim-lspconfig ships the base configs (lsp/*.lua); vim.lsp.config merges ours on top
+      vim.lsp.config("*", { capabilities = capabilities })
       for server, config in pairs(servers) do
-        config.capabilities = capabilities
-        lspconfig[server].setup(config)
+        vim.lsp.config(server, config)
       end
+      vim.lsp.enable(vim.tbl_keys(servers))
     end,
   },
 
