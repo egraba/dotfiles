@@ -24,3 +24,5 @@
     dc = diff --cached
     amend = commit --amend --no-edit
     unstage = reset HEAD --
+[gpg]
+	program = /opt/homebrew/bin/gpg
