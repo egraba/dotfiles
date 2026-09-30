@@ -5,12 +5,10 @@ My personal dotfiles, managed with [GNU Stow](https://www.gnu.org/software/stow/
 ## Prerequisites
 
 - [GNU Stow](https://www.gnu.org/software/stow/)
-- [Neovim](https://neovim.io/) (>= 0.12)
+- [Neovim](https://neovim.io/)
+- [vim-plug](https://github.com/junegunn/vim-plug)
 - [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)
 - [Git](https://git-scm.com/)
-- [ripgrep](https://github.com/BurntSushi/ripgrep) (for Telescope live grep)
-- [tree-sitter CLI](https://github.com/tree-sitter/tree-sitter) (`brew install tree-sitter-cli`, to build parsers)
-- A [Nerd Font](https://www.nerdfonts.com/) (for icons in nvim)
 
 ## Installation
 
@@ -30,7 +28,13 @@ make stow-zsh
 make stow-nvim
 ```
 
-Neovim plugins will auto-install on first launch via lazy.nvim.
+Install vim-plug, then the Neovim plugins:
+
+```bash
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qa
+```
 
 ### Uninstall
 
@@ -55,26 +59,10 @@ make unstow-git
 │       └── custom/
 │           ├── aliases.zsh
 │           └── exports.zsh
-├── nvim/                    # Neovim (Lua + lazy.nvim)
+├── nvim/                    # Neovim (vim-plug)
 │   └── .config/
 │       └── nvim/
-│           ├── init.lua
-│           └── lua/
-│               ├── config/
-│               │   ├── lazy.lua
-│               │   ├── options.lua
-│               │   ├── keymaps.lua
-│               │   └── autocmds.lua
-│               └── plugins/
-│                   ├── colorscheme.lua
-│                   ├── treesitter.lua
-│                   ├── lsp.lua
-│                   ├── completion.lua
-│                   ├── telescope.lua
-│                   ├── filetree.lua
-│                   ├── statusline.lua
-│                   ├── git.lua
-│                   └── editing.lua
+│           └── init.vim
 ├── Makefile
 ├── .stow-local-ignore
 └── README.md
@@ -84,7 +72,7 @@ make unstow-git
 
 - **Git**: Copy `git/.gitconfig.local.example` to `~/.gitconfig.local` and fill in your name/email.
 - **Zsh**: Create `~/.zshrc.local` for machine-specific config (auto-sourced).
-- **Nvim**: Add plugin specs to `nvim/.config/nvim/lua/plugins/` — lazy.nvim auto-loads all `.lua` files in that directory.
+- **Nvim**: Add `Plug '...'` lines to `nvim/.config/nvim/init.vim`, then run `:PlugInstall`.
 
 ## License
 
