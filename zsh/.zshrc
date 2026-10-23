@@ -6,6 +6,7 @@
 
 # Main settings
 export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME=agnoster
 plugins=(git colored-man-pages colorize python brew macos)
 
 # Completion settings
